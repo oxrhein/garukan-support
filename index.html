@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Garukan - account access support</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { margin: 0; font: 16px/1.6 -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    main { max-width: 46rem; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+    h1 { font-size: 1.6rem; margin: 0 0 .25rem; }
+    h2 { font-size: 1.05rem; margin: 2rem 0 .5rem; }
+    .sub { opacity: .7; margin-top: 0; }
+    code { font-size: .92em; }
+    footer { margin-top: 3rem; font-size: .88rem; opacity: .7; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Garukan</h1>
+  <p class="sub">Account access support for messaging users.</p>
+
+  <p>
+    Garukan is a small, transactional support service. It exists for people who are
+    locked out of their own messaging account because the login code never reaches
+    their phone.
+  </p>
+
+  <h2>What the service does</h2>
+  <ol>
+    <li>A user who cannot sign in submits their own phone number to our support bot.</li>
+    <li>Our system sends <strong>one</strong> support email to the published support
+        mailbox of the platform the user is trying to access, asking the platform to
+        reopen the login route for that account.</li>
+    <li>That is the whole transaction. Nothing is stored beyond the request itself.</li>
+  </ol>
+
+  <h2>What the service is not</h2>
+  <ul>
+    <li>No marketing, newsletters or promotional mail of any kind.</li>
+    <li>No purchased, rented or scraped recipient lists.</li>
+    <li>No bulk or unsolicited sending. Recipients are support addresses published by
+        the platforms themselves; we never choose or discover them on our own.</li>
+  </ul>
+
+  <h2>Bounces and complaints</h2>
+  <p>
+    Delivery feedback is monitored through Amazon SES notifications. Any address that
+    bounces or registers a complaint is suppressed immediately, and sending pauses
+    while the cause is reviewed. Volume is deliberately low: one message per user
+    request, from a dedicated sender address on this domain.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    <code>support@garukan.biz.id</code>
+  </p>
+
+  <footer>Garukan &middot; garukan.biz.id</footer>
+</main>
+</body>
+</html>
